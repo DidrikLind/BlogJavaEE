@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Register Page</title>
+</h:head>
+
+<h:body>
+	
+		<h:form>
+			<h:panelGrid id="panel" columns="3">
+			
+				<f:facet name="header">
+					<h:outputText value="Register yourself, upcoming Author!" />
+				</f:facet>
+				
+				<h:outputLabel>First Name</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.firstName}" required="true" id="firstName"
+					requiredMessage="Enter First Name in order to register!"/>
+				<h:message for="firstName"/>
+				
+				<h:outputLabel>Last Name</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.lastName}" required="true" id="lastName"
+					requiredMessage="Enter Last Name in order to register!"/>
+				<h:message for="lastName"/>
+				
+				<h:outputLabel>Nick Name</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.nickName}" required="true" id="nickName"
+					requiredMessage="Enter Nick Name in order to register!"/>
+				<h:message for="nickName"/>
+				
+				<h:outputLabel>Birth Year</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.birthYear}" required="true" id="birthYear"
+					requiredMessage="Enter Birth Year in order to register!"/>
+				<h:message for="birthYear"/>
+				
+				
+				<h:outputLabel>Gender</h:outputLabel>
+				<h:selectOneRadio value="#{authorController.theAuthor.gender}" required="true" id="gender"
+					requiredMessage="Choose gender in order to register!">
+					<f:selectItem itemValue="Male" itemLabel="male" />
+					<f:selectItem itemValue="Female" itemLabel="female" />
+				</h:selectOneRadio>	
+				<h:message for="gender"/>
+				
+
+				<h:outputLabel>Country</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.country}" required="true" id="country"
+					requiredMessage="Enter country in order to register!"/>
+				<h:message for="country"/>
+					
+				<h:outputLabel>Phone</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.phone}" id="phone"/>
+				<h:message for="phone"/>
+				
+				<h:outputLabel>Favourite Beverage</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.favouriteBeverage}" required="true" id="favouriteBeverage"
+					requiredMessage="Enter Favourite Beverage in order to register!"/>
+				<h:message for="favouriteBeverage"/>
+				
+				<h:outputLabel>Favourite Quote</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.favouriteQuote}" required="true" id="favouriteQuote"
+					requiredMessage="Enter Favourite Quote in order to register!"/>
+				<h:message for="favouriteQuote"/>
+				
+				<h:outputLabel>Role Model</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.roleModel}" required="true" id="roleModel"
+					requiredMessage="Enter Role Model in order to register!"/>
+				<h:message for="roleModel"/>
+				
+				
+				
+				<h:outputLabel>User Name</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.username}" required="true" id="username"
+					requiredMessage="Enter User Name in order to register!"/>
+				<h:message for="username"/>	
+
+				<h:outputLabel>Password</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.password}" required="true" id="password"
+					requiredMessage="Enter Password in order to register!"/>
+				<h:message for="password"/>		
+									
+				<h:outputLabel>Email</h:outputLabel>
+				<h:inputText value="#{authorController.theAuthor.email}" required="true" id="email"
+					requiredMessage="Enter Email in order to register!"/>
+				<h:message for="email"/>
+									
+						
+				
+				<f:facet name="footer">
+	                <h:commandButton value="Register" action="#{authorController.registerAuthor()}"/>
+	            </f:facet>
+	            
+	            		
+			</h:panelGrid>
+		</h:form>
+		<hr/>
+		<hr/>
+		
+		<h:form>
+			<h:commandButton action="#{authorController.printTheAuthor()}" value="PRINT REGISTERED AUTHOR" />
+		</h:form>
+		
+		<h:link value="Back to homepage!" outcome="home_page" />
+			
+
+</h:body>
+</html>

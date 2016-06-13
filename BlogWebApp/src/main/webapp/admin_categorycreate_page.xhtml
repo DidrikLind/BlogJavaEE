@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Author Category Info Page</title>
+</h:head>
+
+<h:body>
+	<h1>User :
+		<h:outputText value="#{authorController.theAuthor.username}, 
+			#{authorController.theAuthor.firstName}
+			#{authorController.theAuthor.lastName} !"
+		/> 
+	</h1> 
+	
+	<hr/>
+	<hr/>
+
+	<h:form>
+		<h:commandButton action="#{authorController.printTheAuthor()}" value="CHEKC ACTIVE AUTHOR" />
+	</h:form>
+	<h:form>
+		<h:commandButton action="admin_home_page" value="Home" />
+		<h:commandButton action="admin_categoryinfo_page?faces-redirect=true" value="Edit Categories for the blog" />
+		<h:commandButton action="#{authorController.logoutAuthor()}" value="LOGOUT" />
+	</h:form>
+	
+	<hr/><hr/>
+	<h1> Category Info  </h1>
+	<hr/>
+	<hr/>
+	<h:form>
+		<h:panelGrid id="panel" columns="3">
+		
+			<f:facet name="header">
+				<h:outputText value="Make a Category" />
+			</f:facet>
+			
+			<h:outputLabel>Name</h:outputLabel>
+			<h:inputText value="#{categoryController.theCategory.name}" required="true" id="name"
+				requiredMessage="Enter a name in order to make a category!"/>
+			<h:message for="name"/>
+			
+			<h:outputLabel>Description</h:outputLabel>
+			<h:inputTextarea value="#{categoryController.theCategory.description}" required="true" id="description"
+				requiredMessage="Enter something in the description in order to make a Category!"/>
+			<h:message for="description"/>
+				
+			<f:facet name="footer">
+                <h:commandButton value="Create" action="#{categoryController.createCategory()}"/>
+            </f:facet>
+            	
+		</h:panelGrid>
+	</h:form>	
+	
+</h:body>
+</html>

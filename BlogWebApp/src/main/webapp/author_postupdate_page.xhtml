@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Author Post Create Page</title>
+</h:head>
+
+<h:body>
+	<h1>User :
+		<h:outputText value="#{authorController.theAuthor.username}, 
+			#{authorController.theAuthor.firstName}
+			#{authorController.theAuthor.lastName} !"
+		/> 
+	</h1> 
+	
+	<hr/>
+	<hr/>
+	<h:form>
+		<h:commandButton action="#{authorController.printTheAuthor()}" value="CHEKC ACTIVE AUTHOR" />
+	</h:form>
+	<h:form>
+		<h:commandButton action="author_home_page?faces-redirect=true" value="Home" />
+		<h:commandButton action="author_postinfo_page?faces-redirect=true" value="Your Posts" />
+		<h:commandButton action="#{authorController.logoutAuthor()}" value="LOGOUT" />
+	</h:form>	
+	
+	<hr/>
+	<hr/>
+	
+	<h:form>
+		<h:panelGrid id="panel" columns="3">
+		
+			<f:facet name="header">
+				<h:outputText value="Make a Post" />
+			</f:facet>
+			
+			<h:outputLabel>Title</h:outputLabel>
+			<h:inputText value="#{postController.thePost.title}" required="true" id="title"
+				requiredMessage="Enter a title in order to make a post!"/>
+			<h:message for="title"/>
+			
+			<h:outputLabel>Post</h:outputLabel>
+			<h:inputTextarea value="#{postController.thePost.post}" required="true" id="post"
+				requiredMessage="Enter something in the post in order to make a post!"/>
+			<h:message for="post"/>
+				
+			<f:facet name="footer">
+                <h:commandButton value="Save" action="#{postController.updatePost()}"/>
+            </f:facet>
+            	
+		</h:panelGrid>
+	</h:form>
+	
+	
+
+</h:body>
+</html>
