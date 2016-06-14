@@ -7,7 +7,6 @@ ___
 ![alt text](https://raw.githubusercontent.com/DidrikLind/BlogJavaEE/master/erdiagram.png "Blog ER diagram")
 
 ####Technologies
-I have been using java EE technologies such as
  1. JSF
  2. CDI
  3. EJB
