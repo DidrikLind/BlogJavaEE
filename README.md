@@ -2,8 +2,26 @@
 A blog made with java EE technologies such as: JSF, CDI, EJB and JPA(eclipselink impl.).
 
 ___
-###ER_DIAGRAM: 
+###Overview of the Blog project: 
+####ER_DIAGRAM
 ![alt text](https://raw.githubusercontent.com/DidrikLind/BlogJavaEE/master/erdiagram.png "Blog ER diagram")
+
+####Technologies
+I have been using java EE technologies such as
+1. JSF
+2. CDI
+3. EJB
+4. JPA - EclipseLink implementation
+
+####The idea of my blog and what you can do
+#####
+My idea of the blog project is to explore the functionality of JSF, CDI, EJB and JPA.
+#####
+What you can do
+
+
+
+se till att din readme har en beskrivning av projektet, din idé, vad den gör och vilka teknologier du använt
 ___
 ###HOW TO RUN MY PROJECT
 **Configuration Steps for the database and the persistence-unit**
