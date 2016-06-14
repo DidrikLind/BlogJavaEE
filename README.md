@@ -17,10 +17,6 @@ I have been using java EE technologies such as
 #####My idea of the blog project
 Is to explore the functionality of JSF, CDI, EJB and JPA.
 #####What you can do
-
-
-
-se till att din readme har en beskrivning av projektet, din idé, vad den gör och vilka teknologier du använt
 ___
 ###HOW TO RUN MY PROJECT
 **Configuration Steps for the database and the persistence-unit**
@@ -36,6 +32,6 @@ ___
   * In the persistence.xml file I have named the jta-data-source "jdbc/MySQLDataSourceBlog", so dont forget to change that if you have named it "jdbc/MySQLDataSource" as in the recommended link above. This is your connection pool, so all the configurations are crucial here!
 3. Now when you are going to run the project on the server (when everything hopefully works), you can just swap the values of the      		property tag with name="javax.persistence.schema-generation.database.action" and value="create" to none, drop and drop-and-create for given purpose. This is the key for generating your database as I mentioned in the first step above that JPA/EclipseLink will do :)
 
-
+___
 
 
