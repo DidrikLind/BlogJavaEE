@@ -8,16 +8,15 @@ ___
 
 ####Technologies
 I have been using java EE technologies such as
-1. JSF
-2. CDI
-3. EJB
-4. JPA - EclipseLink implementation
+ 1. JSF
+ 2. CDI
+ 3. EJB
+ 4. JPA - EclipseLink implementation
 
 ####The idea of my blog and what you can do
-#####
-My idea of the blog project is to explore the functionality of JSF, CDI, EJB and JPA.
-#####
-What you can do
+#####My idea of the blog project
+Is to explore the functionality of JSF, CDI, EJB and JPA.
+#####What you can do
 
 
 
