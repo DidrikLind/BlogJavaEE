@@ -26,7 +26,7 @@
             
             <!-- none, create, drop-and-create, drop -->
        		<property name="javax.persistence.schema-generation.database.action"
-                  value="create"/>
+                  value="none"/>
             <!--  <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
         </properties>
 	

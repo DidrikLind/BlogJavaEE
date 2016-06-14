@@ -94,6 +94,9 @@ public class PostController implements Serializable {
 	}
 	
 
+	public String readSpecificPostFromAuthor() {
+		return "author_post_page?faces-redirect=true";
+	}
 	
 	public String readSpecificPost() {
 		return "post_page?faces-redirect=true";

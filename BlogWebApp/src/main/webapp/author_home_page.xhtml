@@ -46,8 +46,12 @@
 		<ui:repeat value="#{aPost.comments}" var="aComment" >
 			<h:outputText value="#{aComment.comment}"/><br/>
 			<h:outputText value="#{aComment.getSimpleFormatDateStr()}"/><br/>
-		</ui:repeat>	
-		
+		</ui:repeat>
+		<h:form>
+			<h:commandButton action="#{postController.readSpecificPostFromAuthor()}" value="Read More about this post">
+				<f:setPropertyActionListener value="#{aPost}" target="#{postController.thePost}" />
+			</h:commandButton>
+		</h:form>					
 		<hr/>
 		<hr/>
 	</ui:repeat>
