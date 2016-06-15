@@ -13,26 +13,14 @@
 </h:head>
 
 <h:body>
-	<h1>User :
-	<h:outputText value="#{authorController.theAuthor.username}, 
-		#{authorController.theAuthor.firstName}
-		#{authorController.theAuthor.lastName} !" 
-	/> 
-	</h1> 
+
+	<ui:include src="includes/login_header.xhtml" />
 	<hr/>
 	<hr/>
-	<!--  <h:link value="Login at the homepage!" outcome="home_page" />-->
-	<h:form>
-		<h:commandButton action="#{authorController.printTheAuthor()}" value="CHEKC ACTIVE AUTHOR" />
-	</h:form>
-	<h:form>
-		<h:commandButton action="admin_home_page" value="Home" />
-		<h:commandButton action="admin_categoryinfo_page?faces-redirect=true" value="Edit Categories for the blog" />
-		<h:commandButton action="#{authorController.logoutAuthor()}" value="LOGOUT" />
-	</h:form>	
+	<ui:include src="includes/admin_nav.xhtml" />	
+	<hr/>
+	<hr/>
 	
-	<hr/>
-	<hr/>
 	<h1>The whole sites Posts, ORDERING: Newest -> Oldest</h1>
 	<hr/>
 	<hr/>

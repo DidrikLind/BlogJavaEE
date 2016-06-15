@@ -13,30 +13,17 @@
 </h:head>
 
 <h:body>
-	<h1>User :
-		<h:outputText value="#{authorController.theAuthor.username}, 
-			#{authorController.theAuthor.firstName}
-			#{authorController.theAuthor.lastName} !"
-		/> 
-	</h1> 
 	
+	<ui:include src="includes/login_header.xhtml" />
 	<hr/>
 	<hr/>
-
-	<h:form>
-		<h:commandButton action="#{authorController.printTheAuthor()}" value="CHEKC ACTIVE AUTHOR" />
-	</h:form>
-	<h:form>
-		<h:commandButton action="author_home_page?faces-redirect=true" value="Home" />
-		<h:commandButton action="author_postinfo_page" value="Your Posts" />
-		<h:commandButton action="#{authorController.logoutAuthor()}" value="LOGOUT" />
-	</h:form>	
+	<ui:include src="includes/author_nav.xhtml" />	
+	<hr/>
+	<hr/>
 	
-	<hr/><hr/>
 	<h1> Your Posts, ORDERING: Oldest -> Newest  </h1>
 	<hr/>
 	<hr/>
-	
 	
 	<ui:repeat value="#{authorController.theAuthor.getPosts()}" var="aPost" >
 		Title : <h:outputText value="#{aPost.title}"/><br/>
