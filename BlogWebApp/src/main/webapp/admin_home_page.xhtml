@@ -42,8 +42,11 @@
 		Date : <h:outputText value="#{aPost.getSimpleFormatDateStr()}"/><br/>
 		Author : <h:outputText value="#{aPost.author.username}"/><br/>
 		<br/>
-		Comments :
+		Comments :<br/>
 		<ui:repeat value="#{aPost.comments}" var="aComment" >
+			<br/>
+			<h:outputText value="#{aComment.name}"/><br/>
+			<h:outputText value="#{aComment.email}"/><br/>
 			<h:outputText value="#{aComment.comment}"/><br/>
 			<h:outputText value="#{aComment.getSimpleFormatDateStr()}"/><br/>
 		</ui:repeat>		

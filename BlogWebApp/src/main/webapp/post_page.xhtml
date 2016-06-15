@@ -54,10 +54,13 @@
 		Date: <h:outputText value="#{postController.thePost.getSimpleFormatDateStr()}"/><br/>
 		Author : <h:outputText value="#{postController.thePost.author.username}"/><br/>
 		<br/>
-		Comments :
+		Comments :<br/>
 		<ui:repeat value="#{postController.thePost.comments}" var="aComment" >
+			<br/>
+			<h:outputText value="#{aComment.name}"/><br/>
+			<h:outputText value="#{aComment.mail}"/><br/>
 			<h:outputText value="#{aComment.comment}"/><br/>
-			<h:outputText value="#{aComment.timestamp.getTimeZone().getDisplayName()}"/><br/>
+			<h:outputText value="#{aComment.getSimpleFormatDateStr()}"/><br/>
 		</ui:repeat>
 		
 		<h:form>
