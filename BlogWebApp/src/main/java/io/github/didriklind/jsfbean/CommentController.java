@@ -29,6 +29,9 @@ public class CommentController implements Serializable {
 	@Inject
 	PostController postController;
 	
+	@Inject
+	AuthorController authorController;
+	
 	@EJB
 	private CommentDAO commentDAO;
 	private Comment theComment;
@@ -88,6 +91,7 @@ public class CommentController implements Serializable {
 		theComment.setTimestamp(Calendar.getInstance());
 		persistComment();
 		theComment = new Comment();
+		authorController.refreshTheAuthor(); // NEW,
 		return "?faces-redirect=true";		
 	}
 	

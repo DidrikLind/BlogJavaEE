@@ -11,7 +11,7 @@
 			<h:commandButton action="#{authorController.printTheAuthor()}" value="CHEKC ACTIVE AUTHOR" />
 		</h:form>
 		<h:form>
-			<h:commandButton action="author_home_page" value="Home" />
+			<h:commandButton action="author_home_page?faces-redirect=true" value="Home" />
 			<h:commandButton action="author_postinfo_page?faces-redirect=true" value="Your Posts" />
 			<h:commandButton action="#{authorController.logoutAuthor()}" value="LOGOUT" />
 		</h:form>

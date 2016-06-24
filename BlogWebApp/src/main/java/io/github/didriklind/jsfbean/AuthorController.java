@@ -92,7 +92,7 @@ public class AuthorController implements Serializable {
 			}
 		}
 		setTheAuthor(new Author());
-		return "home_page"; // komer från home_page.xhtmlö så behgöver ej redirect
+		return "home_page"; // komer frï¿½n home_page.xhtmlï¿½ sï¿½ behgï¿½ver ej redirect
 	}
 	
 	
@@ -119,5 +119,10 @@ public class AuthorController implements Serializable {
 	public void saveThePostToTheAuthor(Post post) {
 		theAuthor.addPost(post);
 		updateAuthor();
+	}
+	
+	//NEW
+	public void refreshTheAuthor() {
+		theAuthor = authorDAO.findAuthorByUserName(theAuthor.getUsername());
 	}
 }
